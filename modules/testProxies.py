@@ -15,12 +15,6 @@ proxyDelay = 5
 
 import sys
 from os import system
-
-def clearScreen():
-    if os == 'win':
-        system('cls')
-    elif (os == 'linux'):
-        system('clear')
     
 import time
 import requests
@@ -38,8 +32,8 @@ import requests.auth
 import datetime
 elapsed_seconds = ''
 from flask import Flask, render_template, Response
+from .detect import cls
 headers = Headers(os="mac", headers=True).generate() # os is the operating system you want the header to be
-clearScreen()
 
 def is_bad_proxy(pip):    
     try:
@@ -65,6 +59,7 @@ def is_bad_proxy(pip):
     return False
 
 def main():
+    cls()
     print("------------------------------------------------")
     print("|                                              |")
     print("|             Proxy Tester V1.0.0              |")
