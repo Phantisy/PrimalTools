@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 import modules
-from os import system
 import sys
 import time
 from colorama import Fore, Style
+from modules.detect import cls
 
 def menu():
-    system('cls')
-    system('clear')
+    cls()
     print("MAIN MENU \n  1. Add eBay Views \n  2. Supreme Monitor \n  3. Test Proxies \n  0. Exit \n")
     choice = input("Enter Option: ")
 
