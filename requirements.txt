@@ -1,0 +1,3 @@
+pip install dhooks
+pip install fake_headers
+pip install beautifulsoup4
